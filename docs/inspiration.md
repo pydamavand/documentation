@@ -1,7 +1,7 @@
 # Inspiration
 
 <p align="center">
-  <img src="/assets/images/header.jpg" alt="Tile of Damavand images">
+  <img src="/assets/images/header.jpg" alt="Damavand from Abbasabad">
 </p>
 
 <p align="center">
@@ -33,7 +33,7 @@ As both a natural wonder and a cultural symbol, Damavand has inspired countless 
 
 Below are three notable, precisely rendered references to Damavand from Persian sources (original Persian lines followed by a careful *literal* translation and a more natural contemporary English rendering). Each entry includes a short note on context.
 
-#### Ferdowsi ([Wikipedia](https://en.wikipedia.org/wiki/Ferdowsi)) — *Shāhnāmeh* (10th–11th century)  
+#### [Ferdowsi](https://en.wikipedia.org/wiki/Ferdowsi) — *Shāhnāmeh* (10th–11th century)  
 
 In Ferdowsi’s epic, the *Shāhnāmeh*, Damavand becomes the eternal prison of **Zahhāk**, a mythical tyrant defeated by the hero Fereydun.  
 
@@ -45,7 +45,7 @@ In Ferdowsi’s epic, the *Shāhnāmeh*, Damavand becomes the eternal prison of 
 
 ---
 
-#### Nāṣir-i Khusraw ([Wikipedia](https://en.wikipedia.org/wiki/Nasir_Khusraw)) — *Safarnāmeh* (11th century)  
+#### [Nāṣir-i Khusraw](https://en.wikipedia.org/wiki/Nasir_Khusraw) — *Safarnāmeh* (11th century)  
 
 The philosopher and traveler Nāṣir-i Khusraw describes Damavand not in myth, but in reality — as a towering dome between Ray and Amol, known for its mineral wealth.  
 
@@ -56,7 +56,7 @@ The philosopher and traveler Nāṣir-i Khusraw describes Damavand not in myth, 
 
 ---
 
-#### Mohammad-Taqi Bahār ([Wikipedia](https://en.wikipedia.org/wiki/Mohammad-Taqi_Bahar)) — *Damāvandieh* (early 20th century)  
+#### [Mohammad-Taqi Bahār](https://en.wikipedia.org/wiki/Mohammad-Taqi_Bahar) — *Damāvandieh* (early 20th century)  
 
 The modern poet Bahār personifies Damavand as a chained giant — snow-capped, iron-girdled, yet unyielding — a powerful symbol of resistance and endurance.  
 

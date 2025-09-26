@@ -1,7 +1,7 @@
 # Damavand
 
 <p align="center">
-  <img src="assets/images/logo_new_cropped.jpg" alt="Damavand Logo" width="300">
+  <img src="/assets/images/logo_new_cropped.jpg" alt="Damavand Logo" width="300">
 </p>
 
 ## Introduction
