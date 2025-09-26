@@ -1,0 +1,2198 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://pydamavand.github.io/documentation/signal_processing/">
+      
+      
+        <link rel="prev" href="../advanced/">
+      
+      
+        <link rel="next" href="../datasets/">
+      
+      
+      <link rel="icon" href="../assets/images/logo_new_cropped.jpg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
+    
+    
+      
+        <title>Signal Processing - Damavand Documentations</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.e53b48f4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#damavand-documention-signal-processing-module-api-reference" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Damavand Documentations" class="md-header__button md-logo" aria-label="Damavand Documentations" data-md-component="logo">
+      
+  <img src="../assets/images/logo_new_cropped.jpg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Damavand Documentations
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Signal Processing
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="amber"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/pydamavand/damavand" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    pydamavand/damavand
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Damavand Documentations" class="md-nav__button md-logo" aria-label="Damavand Documentations" data-md-component="logo">
+      
+  <img src="../assets/images/logo_new_cropped.jpg" alt="logo">
+
+    </a>
+    Damavand Documentations
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/pydamavand/damavand" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    pydamavand/damavand
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../advanced/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Advanced Topics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    API Reference
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            API Reference
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Signal Processing
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Signal Processing
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#transformations-submodule" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transformations Submodule
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Transformations Submodule">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#envsignals" class="md-nav__link">
+    <span class="md-ellipsis">
+      env(signals)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="env(signals)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#extracting-the-envelope-of-a-set-of-signals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extracting the envelope of a set of signals
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Extracting the envelope of a set of signals">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arguments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arguments:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#return-value" class="md-nav__link">
+    <span class="md-ellipsis">
+      Return Value:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#descriptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descriptions:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usage-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage example:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fftsignals-freq_filter-none-window-none" class="md-nav__link">
+    <span class="md-ellipsis">
+      fft(signals, freq_filter = None, window = None)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="fft(signals, freq_filter = None, window = None)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#applying-the-fast-fourier-transform-algorithim-to-derive-frequency-domain-representation-of-a-set-of-signals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Applying the Fast-Fourier Transform algorithim to derive frequency domain representation of a set of signals
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Applying the Fast-Fourier Transform algorithim to derive frequency domain representation of a set of signals">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arguemnts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arguemnts:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#return-value_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Return Value:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#descriptions_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descriptions:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usage-example_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage example:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zoomed_fftsignals-f_min-f_max-desired_len-sampling_freq-freq_filter-none-window-none" class="md-nav__link">
+    <span class="md-ellipsis">
+      zoomed_fft(signals, f_min, f_max, desired_len, sampling_freq, freq_filter = None, window = None)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="zoomed_fft(signals, f_min, f_max, desired_len, sampling_freq, freq_filter = None, window = None)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#applying-the-zoomfft-algorithm-to-derive-a-fine-grained-frequency-representation-in-a-desired-frequency-range" class="md-nav__link">
+    <span class="md-ellipsis">
+      Applying the ZoomFFT algorithm to derive a fine-grained frequency representation in a desired frequency range
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Applying the ZoomFFT algorithm to derive a fine-grained frequency representation in a desired frequency range">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arguments_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arguments:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#return-value_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Return Value:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#descriptions_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descriptions:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usage-example_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage example:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stftsignals-window_len-hop_len-freq_filter-none-window-none" class="md-nav__link">
+    <span class="md-ellipsis">
+      stft(signals, window_len, hop_len, freq_filter = None, window = None)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="stft(signals, window_len, hop_len, freq_filter = None, window = None)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#application-of-short-time-fourier-transform-to-derive-time-frequency-representation-of-the-inputted-signals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Application of Short-Time Fourier Transform to derive Time-Frequency representation of the inputted signals
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Application of Short-Time Fourier Transform to derive Time-Frequency representation of the inputted signals">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arguemnts_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arguemnts:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#return-value_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Return Value:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#descriptions_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descriptions:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usage-example_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage example:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#feature-extraction-submodule" class="md-nav__link">
+    <span class="md-ellipsis">
+      Feature Extraction Submodule
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Feature Extraction Submodule">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#feature_extractorsignals-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      feature_extractor(signals, features)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="feature_extractor(signals, features)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#extracting-a-number-of-features-from-the-inpuuted-signals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extracting a number of features from the inpuuted signals
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Extracting a number of features from the inpuuted signals">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arguments_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arguments:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#return-value_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Return Value:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#features-to-extract" class="md-nav__link">
+    <span class="md-ellipsis">
+      Features to extract
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-on-using-feature_extractorsignals-features-to-extract-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example on using feature_extractor(signals, features) to extract features
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../datasets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Datasets
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../augmentations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Augmentations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../utils/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Utility
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Notebooks
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Notebooks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Dataset Demonstrations
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            Dataset Demonstrations
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notebooks/dataset_demos/CWRU_demo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cloning the damavand repository
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notebooks/dataset_demos/KAIST_demo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cloning the damavand repository
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notebooks/dataset_demos/MaFaulDa_demo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cloning the damavand repository
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notebooks/dataset_demos/MEUT_demo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cloning the damavand repository
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notebooks/dataset_demos/MFPT_demo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cloning the damavand repository
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notebooks/dataset_demos/PU_demo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cloning the damavand repository
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notebooks/dataset_demos/SEU_demo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cloning the damavand repository
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notebooks/dataset_demos/UoO_demo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cloning the damavand repository
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Tutorials
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Tutorials
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notebooks/tutorials/signal_processing_101/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Signal Processing - 101
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notebooks/tutorials/custom_digestor_development/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How to develop a custom digestor?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notebooks/tutorials/custom_feature_extraction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How to extract a custom feature with Damavand?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notebooks/tutorials/classification_demo.ipynb" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Example of Health State Classification
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../inspiration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Inspiration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#transformations-submodule" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transformations Submodule
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Transformations Submodule">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#envsignals" class="md-nav__link">
+    <span class="md-ellipsis">
+      env(signals)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="env(signals)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#extracting-the-envelope-of-a-set-of-signals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extracting the envelope of a set of signals
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Extracting the envelope of a set of signals">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arguments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arguments:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#return-value" class="md-nav__link">
+    <span class="md-ellipsis">
+      Return Value:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#descriptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descriptions:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usage-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage example:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fftsignals-freq_filter-none-window-none" class="md-nav__link">
+    <span class="md-ellipsis">
+      fft(signals, freq_filter = None, window = None)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="fft(signals, freq_filter = None, window = None)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#applying-the-fast-fourier-transform-algorithim-to-derive-frequency-domain-representation-of-a-set-of-signals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Applying the Fast-Fourier Transform algorithim to derive frequency domain representation of a set of signals
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Applying the Fast-Fourier Transform algorithim to derive frequency domain representation of a set of signals">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arguemnts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arguemnts:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#return-value_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Return Value:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#descriptions_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descriptions:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usage-example_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage example:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zoomed_fftsignals-f_min-f_max-desired_len-sampling_freq-freq_filter-none-window-none" class="md-nav__link">
+    <span class="md-ellipsis">
+      zoomed_fft(signals, f_min, f_max, desired_len, sampling_freq, freq_filter = None, window = None)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="zoomed_fft(signals, f_min, f_max, desired_len, sampling_freq, freq_filter = None, window = None)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#applying-the-zoomfft-algorithm-to-derive-a-fine-grained-frequency-representation-in-a-desired-frequency-range" class="md-nav__link">
+    <span class="md-ellipsis">
+      Applying the ZoomFFT algorithm to derive a fine-grained frequency representation in a desired frequency range
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Applying the ZoomFFT algorithm to derive a fine-grained frequency representation in a desired frequency range">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arguments_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arguments:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#return-value_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Return Value:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#descriptions_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descriptions:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usage-example_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage example:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stftsignals-window_len-hop_len-freq_filter-none-window-none" class="md-nav__link">
+    <span class="md-ellipsis">
+      stft(signals, window_len, hop_len, freq_filter = None, window = None)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="stft(signals, window_len, hop_len, freq_filter = None, window = None)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#application-of-short-time-fourier-transform-to-derive-time-frequency-representation-of-the-inputted-signals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Application of Short-Time Fourier Transform to derive Time-Frequency representation of the inputted signals
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Application of Short-Time Fourier Transform to derive Time-Frequency representation of the inputted signals">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arguemnts_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arguemnts:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#return-value_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Return Value:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#descriptions_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descriptions:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usage-example_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage example:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#feature-extraction-submodule" class="md-nav__link">
+    <span class="md-ellipsis">
+      Feature Extraction Submodule
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Feature Extraction Submodule">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#feature_extractorsignals-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      feature_extractor(signals, features)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="feature_extractor(signals, features)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#extracting-a-number-of-features-from-the-inpuuted-signals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extracting a number of features from the inpuuted signals
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Extracting a number of features from the inpuuted signals">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arguments_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arguments:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#return-value_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Return Value:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#features-to-extract" class="md-nav__link">
+    <span class="md-ellipsis">
+      Features to extract
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-on-using-feature_extractorsignals-features-to-extract-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example on using feature_extractor(signals, features) to extract features
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="damavand-documention-signal-processing-module-api-reference">Damavand Documention - Signal Processing Module API Reference</h1>
+<p>Signal processing is of great importance in rotating machinery condition monitoring. On this page, we go through both submodules of the signal processing module: 1)Transformations and 2)Feature extraction. While the former is focused around the application of signal processing transformations (e.g. <a href="https://en.wikipedia.org/wiki/Hilbert_transform">Hilbert Transform</a>, <a href="https://en.wikipedia.org/wiki/Discrete_Fourier_transform">Discrete Fourier Transform</a> and ...) to process the raw time-series, the latter is developed around the extraction of hand-crafted features.</p>
+<h2 id="transformations-submodule">Transformations Submodule</h2>
+<p>In this section, we discuss various signal processing transformations that are available.</p>
+<h3 id="envsignals"><code>env(signals)</code></h3>
+<h4 id="extracting-the-envelope-of-a-set-of-signals">Extracting the envelope of a set of signals</h4>
+<h5 id="arguments">Arguments:</h5>
+<ul>
+<li><strong>signals</strong>: A <code>pandas.DataFrame</code> incuding signals in its rows.</li>
+</ul>
+<h5 id="return-value">Return Value:</h5>
+<ul>
+<li>A <code>pandas.DataFrame</code> whose rows are the envelopes of the signals stored in the inputted DataFrame.</li>
+</ul>
+<h5 id="descriptions">Descriptions:</h5>
+<p>This function extracts the envelope of signals, stored in a <code>pandas.DataFrame</code> object. This is done through the application of Hilbert transform
+(<a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.hilbert.html"><code>scipy.signal.hilbert</code></a>); also <code>numpy.abs</code> is used
+to calculate the absolute magnitude, from both the imaginery and real parts.</p>
+<h4 id="usage-example">Usage example:</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">damavand.damavand.datasets.downloaders</span><span class="w"> </span><span class="kn">import</span> <span class="n">read_addresses</span><span class="p">,</span> <span class="n">ZipDatasetDownloader</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">damavand.damavand.datasets.digestors</span><span class="w"> </span><span class="kn">import</span> <span class="n">MFPT</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="kn">from</span><span class="w"> </span><span class="nn">damavand.damavand.signal_processing.transformations</span><span class="w"> </span><span class="kn">import</span> <span class="n">env</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="c1"># Downloading the MFPT dataset</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="n">addresses</span> <span class="o">=</span> <span class="n">read_addresses</span><span class="p">()</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="n">downloader</span> <span class="o">=</span> <span class="n">ZipDatasetDownloader</span><span class="p">(</span><span class="n">addresses</span><span class="p">[</span><span class="s1">&#39;MFPT&#39;</span><span class="p">])</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="n">downloader</span><span class="o">.</span><span class="n">download_extract</span><span class="p">(</span><span class="s1">&#39;MFPT.zip&#39;</span><span class="p">,</span> <span class="s1">&#39;MFPT/&#39;</span><span class="p">)</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="n">mfpt</span> <span class="o">=</span> <span class="n">MFPT</span><span class="p">(</span><span class="s1">&#39;MFPT/MFPT Fault Data Sets/&#39;</span><span class="p">,</span> <span class="p">[</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    <span class="s1">&#39;1 - Three Baseline Conditions&#39;</span><span class="p">,</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    <span class="s1">&#39;2 - Three Outer Race Fault Conditions&#39;</span><span class="p">,</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>    <span class="s1">&#39;3 - Seven More Outer Race Fault Conditions&#39;</span><span class="p">,</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>    <span class="s1">&#39;4 - Seven Inner Race Fault Conditions&#39;</span><span class="p">,</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="p">])</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="c1"># Mining the dataset</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="n">mining_params</span> <span class="o">=</span> <span class="p">{</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>    <span class="mi">97656</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;win_len&#39;</span><span class="p">:</span> <span class="mi">16671</span><span class="p">,</span> <span class="s1">&#39;hop_len&#39;</span><span class="p">:</span> <span class="mi">2000</span><span class="p">},</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>    <span class="mi">48828</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;win_len&#39;</span><span class="p">:</span> <span class="mi">8337</span><span class="p">,</span> <span class="s1">&#39;hop_len&#39;</span><span class="p">:</span> <span class="mi">1000</span><span class="p">},</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="p">}</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="n">mfpt</span><span class="o">.</span><span class="n">mine</span><span class="p">(</span><span class="n">mining_params</span><span class="p">)</span>
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="c1"># Signal/Metadata split</span>
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">mfpt</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">48828</span><span class="p">])</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="n">signals</span><span class="p">,</span> <span class="n">metadata</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="p">:</span> <span class="o">-</span> <span class="mi">4</span><span class="p">],</span> <span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="o">-</span> <span class="mi">4</span> <span class="p">:]</span>
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="c1"># Envelope extraction</span>
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="n">signals_env</span> <span class="o">=</span> <span class="n">env</span><span class="p">(</span><span class="n">signals</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="fftsignals-freq_filter-none-window-none"><code>fft(signals, freq_filter = None, window = None)</code></h3>
+<h4 id="applying-the-fast-fourier-transform-algorithim-to-derive-frequency-domain-representation-of-a-set-of-signals">Applying the Fast-Fourier Transform algorithim to derive frequency domain representation of a set of signals</h4>
+<h5 id="arguemnts">Arguemnts:</h5>
+<ul>
+<li><strong>signals</strong>: A <code>pandas.DataFrame()</code> incuding signals in its rows.</li>
+<li><strong>freq_filter</strong>:  A frequency filter object from <code>scipy.signal</code> module (e.g. <a href="https://docs.scipy.org/doc/scipy-1.11.0/reference/generated/scipy.signal.butter.html#scipy.signal.butter"><code>scipy.signal.butter</code></a>) to avoid aliasing.</li>
+<li><strong>window</strong>: A window object from <code>scipy.signal.windows</code> module (e.g. <a href="https://docs.scipy.org/doc/scipy-1.11.0/reference/generated/scipy.signal.windows.hann.html#scipy.signal.windows.hann"><code>scipy.signal.windows.hann</code></a>) to encounter the leakage error.</li>
+</ul>
+<h5 id="return-value_1">Return Value:</h5>
+<ul>
+<li>A <code>pandas.DataFrame</code> whose rows are the frequency representations of the inputted DataFrame. As only the real frequency axis is of importance, the lenght of the frequency domain signals is half of the original time domain signal.</li>
+</ul>
+<h5 id="descriptions_1">Descriptions:</h5>
+<p>This function computes the Discrete Fourier Transform (DFT) of a set of signals, through the application of Fast-Fourier Transform (<a href="https://docs.scipy.org/doc/scipy-1.11.0/reference/generated/scipy.fft.fft.html#scipy.fft.fft"><code>scipy.fft.fft</code></a>) algorithm. As it returns only the coeeficients correpsonding to real frequency components (not the imaginery ones), lenght of the returned <code>pandas.DataFrame</code> is half of the inputted <code>pandas.DataFrame</code>. <code>freq_filter</code> and <code>window</code> are not mandatory arguments and a function call without them is valid, however, we recommend using them to avoid aliasing (and of course near-zero/DC filtering through band-pass filters) and leakage error. We encourage you to use frequency axis for the sake of visualization; this can be done using either of the followings: <a href="https://docs.scipy.org/doc/scipy-1.11.0/reference/generated/scipy.fft.fftfreq.html#scipy.fft.fftfreq"><code>scipy.fft.fftfreq</code></a>, <a href="https://numpy.org/doc/stable/reference/generated/numpy.linspace.html"><code>numpy.linspace</code></a> and <strong>damavand.utils.fft_freq_axis</strong>.</p>
+<h4 id="usage-example_1">Usage example:</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">damavand.damavand.datasets.downloaders</span><span class="w"> </span><span class="kn">import</span> <span class="n">read_addresses</span><span class="p">,</span> <span class="n">ZipDatasetDownloader</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">damavand.damavand.datasets.digestors</span><span class="w"> </span><span class="kn">import</span> <span class="n">MFPT</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="kn">from</span><span class="w"> </span><span class="nn">damavand.damavand.signal_processing.transformations</span><span class="w"> </span><span class="kn">import</span> <span class="n">fft</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="kn">import</span><span class="w"> </span><span class="nn">scipy</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="c1"># Downloading the MFPT dataset</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="n">addresses</span> <span class="o">=</span> <span class="n">read_addresses</span><span class="p">()</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="n">downloader</span> <span class="o">=</span> <span class="n">ZipDatasetDownloader</span><span class="p">(</span><span class="n">addresses</span><span class="p">[</span><span class="s1">&#39;MFPT&#39;</span><span class="p">])</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="n">downloader</span><span class="o">.</span><span class="n">download_extract</span><span class="p">(</span><span class="s1">&#39;MFPT.zip&#39;</span><span class="p">,</span> <span class="s1">&#39;MFPT/&#39;</span><span class="p">)</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="n">mfpt</span> <span class="o">=</span> <span class="n">MFPT</span><span class="p">(</span><span class="s1">&#39;MFPT/MFPT Fault Data Sets/&#39;</span><span class="p">,</span> <span class="p">[</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>    <span class="s1">&#39;1 - Three Baseline Conditions&#39;</span><span class="p">,</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>    <span class="s1">&#39;2 - Three Outer Race Fault Conditions&#39;</span><span class="p">,</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>    <span class="s1">&#39;3 - Seven More Outer Race Fault Conditions&#39;</span><span class="p">,</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>    <span class="s1">&#39;4 - Seven Inner Race Fault Conditions&#39;</span><span class="p">,</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="p">])</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="c1"># Mining the dataset</span>
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="n">mining_params</span> <span class="o">=</span> <span class="p">{</span>
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>    <span class="mi">97656</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;win_len&#39;</span><span class="p">:</span> <span class="mi">16671</span><span class="p">,</span> <span class="s1">&#39;hop_len&#39;</span><span class="p">:</span> <span class="mi">2000</span><span class="p">},</span>
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>    <span class="mi">48828</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;win_len&#39;</span><span class="p">:</span> <span class="mi">8337</span><span class="p">,</span> <span class="s1">&#39;hop_len&#39;</span><span class="p">:</span> <span class="mi">1000</span><span class="p">},</span>
+<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="p">}</span>
+<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="n">mfpt</span><span class="o">.</span><span class="n">mine</span><span class="p">(</span><span class="n">mining_params</span><span class="p">)</span>
+<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>
+<a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="c1"># Signal/Metadata split</span>
+<a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">mfpt</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">48828</span><span class="p">])</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a><span class="n">signals</span><span class="p">,</span> <span class="n">metadata</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="p">:</span> <span class="o">-</span> <span class="mi">4</span><span class="p">],</span> <span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="o">-</span> <span class="mi">4</span> <span class="p">:]</span>
+<a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a>
+<a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a><span class="c1"># Frequency spectra extraction, through FFT</span>
+<a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a><span class="n">window</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">signal</span><span class="o">.</span><span class="n">windows</span><span class="o">.</span><span class="n">hann</span><span class="p">(</span><span class="n">signals_env</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a><span class="n">freq_filter</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">signal</span><span class="o">.</span><span class="n">butter</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">23500</span><span class="p">],</span> <span class="s1">&#39;bandpass&#39;</span><span class="p">,</span> <span class="n">fs</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">metadata</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]),</span> <span class="n">output</span><span class="o">=</span><span class="s1">&#39;sos&#39;</span><span class="p">)</span>
+<a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a><span class="n">signals_fft</span> <span class="o">=</span> <span class="n">fft</span><span class="p">(</span><span class="n">signals</span><span class="p">,</span> <span class="n">freq_filter</span> <span class="o">=</span> <span class="n">freq_filter</span><span class="p">,</span> <span class="n">window</span> <span class="o">=</span> <span class="n">window</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="zoomed_fftsignals-f_min-f_max-desired_len-sampling_freq-freq_filter-none-window-none"><code>zoomed_fft(signals, f_min, f_max, desired_len, sampling_freq, freq_filter = None, window = None)</code></h3>
+<h4 id="applying-the-zoomfft-algorithm-to-derive-a-fine-grained-frequency-representation-in-a-desired-frequency-range">Applying the ZoomFFT algorithm to derive a fine-grained frequency representation in a desired frequency range</h4>
+<h5 id="arguments_1">Arguments:</h5>
+<ul>
+<li><strong>signals</strong>: A <code>pandas.DataFrame</code> incuding signals in its rows.</li>
+<li><strong>f_min</strong>: Minum of the desired frequency range.</li>
+<li><strong>f_max</strong>: Maximum of the desired frequency range.</li>
+<li><strong>desired_len</strong>: The desired length of the frequency domain representation.</li>
+<li><strong>sampling_freq</strong>: The sampling frequency of the signals included in <strong>signals</strong>.</li>
+<li><strong>freq_filter</strong>:  A frequency filter object from <code>scipy.signal</code> module (e.g. <a href="https://docs.scipy.org/doc/scipy-1.11.0/reference/generated/scipy.signal.butter.html#scipy.signal.butter"><code>scipy.signal.butter</code></a>) to avoid aliasing.</li>
+<li><strong>window</strong>: A window object from <code>scipy.signal.windows</code> module (e.g. <a href="https://docs.scipy.org/doc/scipy-1.11.0/reference/generated/scipy.signal.windows.hann.html#scipy.signal.windows.hann"><code>scipy.signal.windows.hann</code></a>) to encounter the leakage error.</li>
+</ul>
+<h5 id="return-value_2">Return Value:</h5>
+<ul>
+<li>A <code>pandas.DataFrame</code> whose rows are the frequency representations of the inputted DataFrame, in the desired frequency range and with the chosen lenght.</li>
+</ul>
+<h5 id="descriptions_2">Descriptions:</h5>
+<p>This function enables one to derive a frequency represenationin a desired frequency range and with the desired length, through the application of <a href="https://docs.scipy.org/doc/scipy-1.11.0/reference/generated/scipy.signal.ZoomFFT.html#scipy.signal.ZoomFFT"><code>sicpy.signal.ZoomFFT</code></a>. <code>freq_filter</code> and <code>window</code> are not mandatory arguments and a function call without them is valid, however, we recommend using them to avoid aliasing (and of course near-zero/DC filtering through band-pass filters) and leakage error. We encourage you to use frequency axis for the sake of visualization; this can be done using either of the followings: <a href="https://numpy.org/doc/stable/reference/generated/numpy.linspace.html"><code>numpy.linspace</code></a> or <code>damavand.utils.zoomed_fft_freq_axis</code>.</p>
+<h4 id="usage-example_2">Usage example:</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">damavand.damavand.datasets.downloaders</span><span class="w"> </span><span class="kn">import</span> <span class="n">read_addresses</span><span class="p">,</span> <span class="n">ZipDatasetDownloader</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">damavand.damavand.datasets.digestors</span><span class="w"> </span><span class="kn">import</span> <span class="n">MFPT</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="kn">from</span><span class="w"> </span><span class="nn">damavand.damavand.signal_processing.transformations</span><span class="w"> </span><span class="kn">import</span> <span class="n">zoomed_fft</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="kn">import</span><span class="w"> </span><span class="nn">scipy</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="c1"># Downloading the MFPT dataset</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="n">addresses</span> <span class="o">=</span> <span class="n">read_addresses</span><span class="p">()</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="n">downloader</span> <span class="o">=</span> <span class="n">ZipDatasetDownloader</span><span class="p">(</span><span class="n">addresses</span><span class="p">[</span><span class="s1">&#39;MFPT&#39;</span><span class="p">])</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="n">downloader</span><span class="o">.</span><span class="n">download_extract</span><span class="p">(</span><span class="s1">&#39;MFPT.zip&#39;</span><span class="p">,</span> <span class="s1">&#39;MFPT/&#39;</span><span class="p">)</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="n">mfpt</span> <span class="o">=</span> <span class="n">MFPT</span><span class="p">(</span><span class="s1">&#39;MFPT/MFPT Fault Data Sets/&#39;</span><span class="p">,</span> <span class="p">[</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>    <span class="s1">&#39;1 - Three Baseline Conditions&#39;</span><span class="p">,</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>    <span class="s1">&#39;2 - Three Outer Race Fault Conditions&#39;</span><span class="p">,</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>    <span class="s1">&#39;3 - Seven More Outer Race Fault Conditions&#39;</span><span class="p">,</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>    <span class="s1">&#39;4 - Seven Inner Race Fault Conditions&#39;</span><span class="p">,</span>
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="p">])</span>
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="c1"># Mining the dataset</span>
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="n">mining_params</span> <span class="o">=</span> <span class="p">{</span>
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>    <span class="mi">97656</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;win_len&#39;</span><span class="p">:</span> <span class="mi">16671</span><span class="p">,</span> <span class="s1">&#39;hop_len&#39;</span><span class="p">:</span> <span class="mi">2000</span><span class="p">},</span>
+<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>    <span class="mi">48828</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;win_len&#39;</span><span class="p">:</span> <span class="mi">8337</span><span class="p">,</span> <span class="s1">&#39;hop_len&#39;</span><span class="p">:</span> <span class="mi">1000</span><span class="p">},</span>
+<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a><span class="p">}</span>
+<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a><span class="n">mfpt</span><span class="o">.</span><span class="n">mine</span><span class="p">(</span><span class="n">mining_params</span><span class="p">)</span>
+<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>
+<a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a><span class="c1"># Signal/Metadata split</span>
+<a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">mfpt</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">48828</span><span class="p">])</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a><span class="n">signals</span><span class="p">,</span> <span class="n">metadata</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="p">:</span> <span class="o">-</span> <span class="mi">4</span><span class="p">],</span> <span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="o">-</span> <span class="mi">4</span> <span class="p">:]</span>
+<a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a>
+<a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a><span class="c1"># Frequency spectra extraction, through zoomed_FFT</span>
+<a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a><span class="n">window</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">signal</span><span class="o">.</span><span class="n">windows</span><span class="o">.</span><span class="n">hann</span><span class="p">(</span><span class="n">signals_env</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a><span class="n">freq_filter</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">signal</span><span class="o">.</span><span class="n">butter</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">23500</span><span class="p">],</span> <span class="s1">&#39;bandpass&#39;</span><span class="p">,</span> <span class="n">fs</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">metadata</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]),</span> <span class="n">output</span><span class="o">=</span><span class="s1">&#39;sos&#39;</span><span class="p">)</span>
+<a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a><span class="n">signals_ZoomedFFT</span> <span class="o">=</span> <span class="n">zoomed_fft</span><span class="p">(</span><span class="n">signals_env</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2500</span><span class="p">,</span> <span class="mi">2500</span><span class="p">,</span> <span class="nb">float</span><span class="p">(</span><span class="n">metadata</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]),</span> <span class="n">freq_filter</span> <span class="o">=</span> <span class="n">freq_filter</span><span class="p">,</span> <span class="n">window</span> <span class="o">=</span> <span class="n">window</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="stftsignals-window_len-hop_len-freq_filter-none-window-none"><code>stft(signals, window_len, hop_len, freq_filter = None, window = None)</code></h3>
+<h4 id="application-of-short-time-fourier-transform-to-derive-time-frequency-representation-of-the-inputted-signals">Application of Short-Time Fourier Transform to derive Time-Frequency representation of the inputted signals</h4>
+<h5 id="arguemnts_1">Arguemnts:</h5>
+<ul>
+<li><strong>signals</strong>: A <code>pandas.DataFrame</code> incuding signals in its rows.</li>
+<li><strong>window_len</strong>: Lenght of the desired time segments.</li>
+<li><strong>hop_len</strong>: Length of the feed, used to get forward during the segmentation process.</li>
+<li><strong>freq_filter</strong>:  A frequency filter object from <code>scipy.signal</code> module (e.g. <a href="https://docs.scipy.org/doc/scipy-1.11.0/reference/generated/scipy.signal.butter.html#scipy.signal.butter"><code>scipy.signal.butter</code></a>) to avoid aliasing.</li>
+<li><strong>window</strong>: A window object from <code>scipy.signal.windows</code> module (e.g. <a href="https://docs.scipy.org/doc/scipy-1.11.0/reference/generated/scipy.signal.windows.hann.html#scipy.signal.windows.hann"><code>scipy.signal.windows.hann</code></a>) to encounter the leakage error.</li>
+</ul>
+<h5 id="return-value_3">Return Value:</h5>
+<ul>
+<li>A <code>numpy.array</code>, whose first dimension equals the number of rows included in the input <code>pandas.DataFrame</code>; it includes derived Time-Frequency representations of the inputted signals. <code>freq_filter</code> and <code>window</code> are not mandatory arguments and a function call without them is valid, however, we recommend using them to avoid aliasing (and of course near-zero/DC filtering through band-pass filters) and leakage error. Pay attention that unlike the case of <code>damavand.signal_processing.FFT</code> or <code>damavand.signal_processing.ZoomedFFT</code>, for this function you have to define freq_filter and window objects with a lenght that suits the segmented signals (equal to the <code>window_len</code> argument), instead of the original signals, presented in the inputted <code>pandas.DataFrame</code>.</li>
+</ul>
+<h5 id="descriptions_3">Descriptions:</h5>
+<p>By the application of this function, one is able to derive Time-Frequency representation; this is done by first segmenting the original signals to a series of shorter signals and consecutively <a href="https://docs.scipy.org/doc/scipy-1.11.0/reference/generated/scipy.fft.fft.html#scipy.fft.fft"><strong>FFT</strong></a> is applied on each
+segmented signal to derive the corresponding frequency representation. Results are usually visualized as heatmaps.</p>
+<h4 id="usage-example_3">Usage example:</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">damavand.damavand.datasets.downloaders</span><span class="w"> </span><span class="kn">import</span> <span class="n">read_addresses</span><span class="p">,</span> <span class="n">ZipDatasetDownloader</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">damavand.damavand.datasets.digestors</span><span class="w"> </span><span class="kn">import</span> <span class="n">MFPT</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="kn">from</span><span class="w"> </span><span class="nn">damavand.damavand.signal_processing.transformations</span><span class="w"> </span><span class="kn">import</span> <span class="n">stft</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="kn">import</span><span class="w"> </span><span class="nn">scipy</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="c1"># Downloading the MFPT dataset</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="n">addresses</span> <span class="o">=</span> <span class="n">read_addresses</span><span class="p">()</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="n">downloader</span> <span class="o">=</span> <span class="n">ZipDatasetDownloader</span><span class="p">(</span><span class="n">addresses</span><span class="p">[</span><span class="s1">&#39;MFPT&#39;</span><span class="p">])</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="n">downloader</span><span class="o">.</span><span class="n">download_extract</span><span class="p">(</span><span class="s1">&#39;MFPT.zip&#39;</span><span class="p">,</span> <span class="s1">&#39;MFPT/&#39;</span><span class="p">)</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="n">mfpt</span> <span class="o">=</span> <span class="n">MFPT</span><span class="p">(</span><span class="s1">&#39;MFPT/MFPT Fault Data Sets/&#39;</span><span class="p">,</span> <span class="p">[</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>    <span class="s1">&#39;1 - Three Baseline Conditions&#39;</span><span class="p">,</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>    <span class="s1">&#39;2 - Three Outer Race Fault Conditions&#39;</span><span class="p">,</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>    <span class="s1">&#39;3 - Seven More Outer Race Fault Conditions&#39;</span><span class="p">,</span>
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>    <span class="s1">&#39;4 - Seven Inner Race Fault Conditions&#39;</span><span class="p">,</span>
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="p">])</span>
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="c1"># Mining the dataset</span>
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="n">mining_params</span> <span class="o">=</span> <span class="p">{</span>
+<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>    <span class="mi">97656</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;win_len&#39;</span><span class="p">:</span> <span class="mi">16671</span><span class="p">,</span> <span class="s1">&#39;hop_len&#39;</span><span class="p">:</span> <span class="mi">2000</span><span class="p">},</span>
+<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>    <span class="mi">48828</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;win_len&#39;</span><span class="p">:</span> <span class="mi">8337</span><span class="p">,</span> <span class="s1">&#39;hop_len&#39;</span><span class="p">:</span> <span class="mi">1000</span><span class="p">},</span>
+<a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a><span class="p">}</span>
+<a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a><span class="n">mfpt</span><span class="o">.</span><span class="n">mine</span><span class="p">(</span><span class="n">mining_params</span><span class="p">)</span>
+<a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a>
+<a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a><span class="c1"># Signal/Metadata split</span>
+<a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">mfpt</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">48828</span><span class="p">])</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a><span class="n">signals</span><span class="p">,</span> <span class="n">metadata</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="p">:</span> <span class="o">-</span> <span class="mi">4</span><span class="p">],</span> <span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="o">-</span> <span class="mi">4</span> <span class="p">:]</span>
+<a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a>
+<a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a><span class="c1"># Time-Frequency spectrograms extraction, through stft</span>
+<a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a><span class="n">STFT_window</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">signal</span><span class="o">.</span><span class="n">windows</span><span class="o">.</span><span class="n">hann</span><span class="p">(</span><span class="mi">2400</span><span class="p">)</span>
+<a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a><span class="n">STFT_freq_filter</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">signal</span><span class="o">.</span><span class="n">butter</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">23500</span><span class="p">],</span> <span class="s1">&#39;bandpass&#39;</span><span class="p">,</span> <span class="n">fs</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">metadata</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]),</span> <span class="n">output</span><span class="o">=</span><span class="s1">&#39;sos&#39;</span><span class="p">)</span>
+<a id="__codelineno-3-32" name="__codelineno-3-32" href="#__codelineno-3-32"></a><span class="n">signal_STFT</span> <span class="o">=</span> <span class="n">stft</span><span class="p">(</span><span class="n">signals</span><span class="p">,</span> <span class="mi">2400</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="n">STFT_freq_filter</span><span class="p">,</span> <span class="n">STFT_window</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="feature-extraction-submodule">Feature Extraction Submodule</h2>
+<p>Hand-crafted features (from both time and frequency domains) are widely used for rotating machinery conidition monitoring. This submodule, facilitates the extraction of such features from raw (time and frequency) data. We first introduce <code>feature_extractor(signals, features)</code> function that enables one to extract various functions from raw data <code>pd.DataFrame</code>s, at once. Next, a comprehensive list of features to extract are introduced; last but not least, a code snippet to extract these features is provided.</p>
+<h3 id="feature_extractorsignals-features"><code>feature_extractor(signals, features)</code></h3>
+<h4 id="extracting-a-number-of-features-from-the-inpuuted-signals">Extracting a number of features from the inpuuted signals</h4>
+<h5 id="arguments_2">Arguments:</h5>
+<ul>
+<li><strong>signals</strong>: A <code>pandas.DataFrame</code> incuding signals in its rows.</li>
+<li><strong>features</strong>: A python <code>dict</code> where:
+  - keys are feature names
+  - values are tuples of (function, args, kwargs) where:
+    * function: the feature extraction function
+    * args: tuple of positional arguments (optional)
+    * kwargs: dict of keyword arguments (optional)</li>
+</ul>
+<h5 id="return-value_4">Return Value:</h5>
+<ul>
+<li>A <code>pandas.DataFrame</code>, including the feature values for the signals in the inputted <code>pandas.DataFrame</code>.</li>
+</ul>
+<h5 id="description">Description:</h5>
+<p>To extract a set of features from the signals presented in a <code>pandas.DataFrame</code>, one can use this function. Features of interest are supposed to be passed as a python <code>dict</code> where:
+  - keys are feature names
+  - values are tuples of (function, args, kwargs) where:</p>
+<p>- function: the feature extraction function
+    - args: tuple of positional arguments (optional)
+    - kwargs: dict of keyword arguments (optional)</p>
+<h3 id="features-to-extract">Features to extract</h3>
+<p><a href="https://www.sciencedirect.com/science/article/abs/pii/S0888327006002512">This study</a> introduces 11 time-domain and 13 frequency-domain (24 in total) features for rotating machinery fault diagnosis. Detailed list of them alongside tips on how to extract them using <code>feature_extractor(signals, features)</code> is included in the table below. It is worth mentioning that <span class="arithmatex">\(x(n)\)</span>, <span class="arithmatex">\(s(k)\)</span> and <span class="arithmatex">\(f_k\)</span> correspond to time-domain signal, frequency spectrum and corresponding frequency axis; moreover, TS and FS in the <strong>Description</strong> column stand for time-series and frequency spectra. For detailed example on how to extract these features using <code>feature_extractor(signals, features)</code>, checkout the code snippet below the table.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><strong>Number</strong></th>
+<th style="text-align: center;"><strong>Formula</strong></th>
+<th style="text-align: center;"><strong>Description</strong></th>
+<th style="text-align: center;"><strong>Implementation</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">P1</td>
+<td style="text-align: center;"><span class="arithmatex">\(P_1 = \frac{\sum_{n=1}^{N} x(n)}{N}\)</span></td>
+<td style="text-align: center;">TS Mean</td>
+<td style="text-align: center;"><code>np.mean</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">P2</td>
+<td style="text-align: center;"><span class="arithmatex">\(P_2 = \sqrt{\frac{\sum_{n=1}^{N} (x(n)-P_1)^2}{N-1}}\)</span></td>
+<td style="text-align: center;">TS Standard Deviation</td>
+<td style="text-align: center;"><code>np.std</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">P3</td>
+<td style="text-align: center;"><span class="arithmatex">\(P_3 = \left(\frac{\sum_{n=1}^{N} \sqrt{\|x(n)\|}}{N}\right)^{2}\)</span></td>
+<td style="text-align: center;">TS Squared Mean of Square Roots of Absolutes</td>
+<td style="text-align: center;"><code>damavand.damavand.signal_processing.feature_extraction.smsa</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">P4</td>
+<td style="text-align: center;"><span class="arithmatex">\(P_4 = \sqrt{\frac{\sum_{n=1}^{N} (x(n))^2}{N}}\)</span></td>
+<td style="text-align: center;">TS Root Mean Square</td>
+<td style="text-align: center;"><code>damavand.damavand.signal_processing.feature_extraction.rms</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">P5</td>
+<td style="text-align: center;"><span class="arithmatex">\(P_5 = \max \|x(n)\|\)</span></td>
+<td style="text-align: center;">TS Peak</td>
+<td style="text-align: center;"><code>damavand.damavand.signal_processing.feature_extraction.peak</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">P6</td>
+<td style="text-align: center;"><span class="arithmatex">\(P_6 = \frac{\sum_{n=1}^{N} (x(n)-P_1)^3}{(N-1)P_1^3}\)</span></td>
+<td style="text-align: center;">TS Skewness</td>
+<td style="text-align: center;"><code>scipy.stats.skew</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">P7</td>
+<td style="text-align: center;"><span class="arithmatex">\(P_7 = \sqrt{\frac{\sum_{n=1}^{N} (x(n)-P_1)^4}{(N-1)P_1^4}}\)</span></td>
+<td style="text-align: center;">TS Kurtosis</td>
+<td style="text-align: center;"><code>scipy.stats.kurtosis</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">P8</td>
+<td style="text-align: center;"><span class="arithmatex">\(P_8 = \frac{p_5}{p_4}\)</span></td>
+<td style="text-align: center;">TS Crest Factor</td>
+<td style="text-align: center;"><code>damavand.damavand.signal_processing.feature_extraction.crest_factor</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">P9</td>
+<td style="text-align: center;"><span class="arithmatex">\(P_9 = \frac{p_5}{p_3}\)</span></td>
+<td style="text-align: center;">TS Clearance Factor</td>
+<td style="text-align: center;"><code>damavand.damavand.signal_processing.feature_extraction.clearance_factor</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">P10</td>
+<td style="text-align: center;"><span class="arithmatex">\(P_{10} = \frac{P_4}{\frac{1}{N}\sum_{n=1}^{N}\|x(n)\|}\)</span></td>
+<td style="text-align: center;">TS Shape Factor</td>
+<td style="text-align: center;"><code>damavand.damavand.signal_processing.feature_extraction.shape_factor</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">P11</td>
+<td style="text-align: center;"><span class="arithmatex">\(P_{11} = \frac{P_5}{\frac{1}{N}\sum_{n=1}^{N}\|x(n)\|}\)</span></td>
+<td style="text-align: center;">TS Impulse Factor</td>
+<td style="text-align: center;"><code>damavand.damavand.signal_processing.feature_extraction.impulse_factor</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">P12</td>
+<td style="text-align: center;"><span class="arithmatex">\(P_{12} = \frac{\sum_{k=1}^{K} s(k)}{K}\)</span></td>
+<td style="text-align: center;">FS Mean</td>
+<td style="text-align: center;"><code>np.mean</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">P13</td>
+<td style="text-align: center;"><span class="arithmatex">\(P_{13} = \sqrt{\frac{\sum_{k=1}^{K} (s(k)-P_{12})^2}{K-1}}\)</span></td>
+<td style="text-align: center;">FS Variance</td>
+<td style="text-align: center;"><code>np.var</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">P14</td>
+<td style="text-align: center;"><span class="arithmatex">\(P_{14} = \frac{\sum_{k=1}^{K} (s(k)-P_{12})^3}{K(\sqrt{P_{12}})^3}\)</span></td>
+<td style="text-align: center;">FS Skewness</td>
+<td style="text-align: center;"><code>scipy.stats.skew</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">P15</td>
+<td style="text-align: center;"><span class="arithmatex">\(P_{15} = \frac{\sum_{k=1}^{K} (s(k)-P_{12})^4}{KP_{13}^2}\)</span></td>
+<td style="text-align: center;">FS Kurtosis</td>
+<td style="text-align: center;"><code>scipy.stats.kurtosis</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">P16</td>
+<td style="text-align: center;"><span class="arithmatex">\(P_{16} = \frac{\sum_{k=1}^{K} f_k \cdot s(k)}{\sum_{k=1}^{K} s(k)}\)</span></td>
+<td style="text-align: center;">FS Spectral Centroid</td>
+<td style="text-align: center;"><code>damavand.damavand.signal_processing.feature_extraction.spectral_centroid</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">P17</td>
+<td style="text-align: center;"><span class="arithmatex">\(P_{17} = \sqrt{\frac{\sum_{k=1}^{K} (f_k - P_{16})^2 \cdot s(k)}{K}}\)</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><code>damavand.damavand.signal_processing.feature_extraction.P17</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">P18</td>
+<td style="text-align: center;"><span class="arithmatex">\(P_{18} = \sqrt{\frac{\sum_{k=1}^{K} f_k^2 \cdot s(k)}{\sum_{k=1}^{K} s(k)}}\)</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><code>damavand.damavand.signal_processing.feature_extraction.P18</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">P19</td>
+<td style="text-align: center;"><span class="arithmatex">\(P_{19} = \sqrt{\frac{\sum_{k=1}^{K} f_k^4 \cdot s(k)}{\sum_{k=1}^{K} f_k^2 \cdot s(k)}}\)</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><code>damavand.damavand.signal_processing.feature_extraction.P19</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">P20</td>
+<td style="text-align: center;"><span class="arithmatex">\(P_{20} = \frac{\sum_{k=1}^{K} f_k^2 \cdot s(k)}{\sum_{k=1}^{K} s(k) \sum_{k=1}^{K} f_k^4 \cdot s(k)}\)</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><code>damavand.damavand.signal_processing.feature_extraction.P20</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">P21</td>
+<td style="text-align: center;"><span class="arithmatex">\(P_{21} = \frac{P_{17}}{P_{16}}\)</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><code>damavand.damavand.signal_processing.feature_extraction.P21</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">P22</td>
+<td style="text-align: center;"><span class="arithmatex">\(P_{22} = \frac{\sum_{k=1}^{K} (f_k-P_{16})^3 \cdot s(k)}{KP_{17}^3}\)</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><code>damavand.damavand.signal_processing.feature_extraction.P22</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">P23</td>
+<td style="text-align: center;"><span class="arithmatex">\(P_{23} = \frac{\sum_{k=1}^{K} (f_k-P_{16})^4 \cdot s(k)}{KP_{17}^4}\)</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><code>damavand.damavand.signal_processing.feature_extraction.P23</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">P24</td>
+<td style="text-align: center;"><span class="arithmatex">\(P_{24} = \frac{\sum_{k=1}^{K} (f_k-P_{16})^{1/2} \cdot s(k)}{K\sqrt{P_{17}}}\)</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><code>damavand.damavand.signal_processing.feature_extraction.P24</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="example-on-using-feature_extractorsignals-features-to-extract-features">Example on using <code>feature_extractor(signals, features)</code> to extract features</h3>
+<p>The code snippet below, explains the feature extraction from both time and frequency domains, comprehensively.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># Importings</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">damavand.damavand.datasets.downloaders</span><span class="w"> </span><span class="kn">import</span> <span class="n">read_addresses</span><span class="p">,</span> <span class="n">ZipDatasetDownloader</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="kn">from</span><span class="w"> </span><span class="nn">damavand.damavand.datasets.digestors</span><span class="w"> </span><span class="kn">import</span> <span class="n">MFPT</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="kn">from</span><span class="w"> </span><span class="nn">damavand.damavand.signal_processing.feature_extraction</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="kn">from</span><span class="w"> </span><span class="nn">damavand.damavand.signal_processing.transformations</span><span class="w"> </span><span class="kn">import</span> <span class="n">fft</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="kn">from</span><span class="w"> </span><span class="nn">damavand.damavand.utils</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="kn">from</span><span class="w"> </span><span class="nn">zipfile</span><span class="w"> </span><span class="kn">import</span> <span class="n">ZipFile</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="kn">import</span><span class="w"> </span><span class="nn">scipy</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="c1"># Downloading the MFPT dataset</span>
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="n">addresses</span> <span class="o">=</span> <span class="n">read_addresses</span><span class="p">()</span>
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="n">downloader</span> <span class="o">=</span> <span class="n">ZipDatasetDownloader</span><span class="p">(</span><span class="n">addresses</span><span class="p">[</span><span class="s1">&#39;MFPT&#39;</span><span class="p">])</span>
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="n">downloader</span><span class="o">.</span><span class="n">download_extract</span><span class="p">(</span><span class="s1">&#39;MFPT.zip&#39;</span><span class="p">,</span> <span class="s1">&#39;MFPT/&#39;</span><span class="p">)</span>
+<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>
+<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="n">mfpt</span> <span class="o">=</span> <span class="n">MFPT</span><span class="p">(</span><span class="s1">&#39;MFPT/MFPT Fault Data Sets/&#39;</span><span class="p">,</span> <span class="p">[</span>
+<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>    <span class="s1">&#39;1 - Three Baseline Conditions&#39;</span><span class="p">,</span>
+<a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>    <span class="s1">&#39;2 - Three Outer Race Fault Conditions&#39;</span><span class="p">,</span>
+<a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>    <span class="s1">&#39;3 - Seven More Outer Race Fault Conditions&#39;</span><span class="p">,</span>
+<a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>    <span class="s1">&#39;4 - Seven Inner Race Fault Conditions&#39;</span><span class="p">,</span>
+<a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a><span class="p">])</span>
+<a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a>
+<a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a><span class="c1"># Mining the dataset</span>
+<a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a><span class="n">mining_params</span> <span class="o">=</span> <span class="p">{</span>
+<a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a>    <span class="mi">97656</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;win_len&#39;</span><span class="p">:</span> <span class="mi">16671</span><span class="p">,</span> <span class="s1">&#39;hop_len&#39;</span><span class="p">:</span> <span class="mi">2000</span><span class="p">},</span>
+<a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a>    <span class="mi">48828</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;win_len&#39;</span><span class="p">:</span> <span class="mi">8337</span><span class="p">,</span> <span class="s1">&#39;hop_len&#39;</span><span class="p">:</span> <span class="mi">1000</span><span class="p">},</span>
+<a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a><span class="p">}</span>
+<a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a><span class="n">mfpt</span><span class="o">.</span><span class="n">mine</span><span class="p">(</span><span class="n">mining_params</span><span class="p">)</span>
+<a id="__codelineno-4-31" name="__codelineno-4-31" href="#__codelineno-4-31"></a>
+<a id="__codelineno-4-32" name="__codelineno-4-32" href="#__codelineno-4-32"></a><span class="c1"># Signal/Metadata split</span>
+<a id="__codelineno-4-33" name="__codelineno-4-33" href="#__codelineno-4-33"></a><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">mfpt</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">48828</span><span class="p">])</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<a id="__codelineno-4-34" name="__codelineno-4-34" href="#__codelineno-4-34"></a><span class="n">signals</span><span class="p">,</span> <span class="n">metadata</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="p">:</span> <span class="o">-</span> <span class="mi">4</span><span class="p">],</span> <span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="o">-</span> <span class="mi">4</span> <span class="p">:]</span>
+<a id="__codelineno-4-35" name="__codelineno-4-35" href="#__codelineno-4-35"></a>
+<a id="__codelineno-4-36" name="__codelineno-4-36" href="#__codelineno-4-36"></a><span class="c1"># Extracting time-domain features</span>
+<a id="__codelineno-4-37" name="__codelineno-4-37" href="#__codelineno-4-37"></a><span class="n">time_features</span> <span class="o">=</span> <span class="p">{</span>
+<a id="__codelineno-4-38" name="__codelineno-4-38" href="#__codelineno-4-38"></a>  <span class="s1">&#39;mean&#39;</span><span class="p">:</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">,</span> <span class="p">(),</span> <span class="p">{}),</span>
+<a id="__codelineno-4-39" name="__codelineno-4-39" href="#__codelineno-4-39"></a>  <span class="s1">&#39;std&#39;</span><span class="p">:</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">,</span> <span class="p">(),</span> <span class="p">{}),</span>
+<a id="__codelineno-4-40" name="__codelineno-4-40" href="#__codelineno-4-40"></a>  <span class="s1">&#39;smsa&#39;</span><span class="p">:</span> <span class="p">(</span><span class="n">smsa</span><span class="p">,</span> <span class="p">(),</span> <span class="p">{}),</span>
+<a id="__codelineno-4-41" name="__codelineno-4-41" href="#__codelineno-4-41"></a>  <span class="s1">&#39;rms&#39;</span><span class="p">:</span> <span class="p">(</span><span class="n">rms</span><span class="p">,</span> <span class="p">(),</span> <span class="p">{}),</span>
+<a id="__codelineno-4-42" name="__codelineno-4-42" href="#__codelineno-4-42"></a>  <span class="s1">&#39;peak&#39;</span><span class="p">:</span> <span class="p">(</span><span class="n">peak</span><span class="p">,</span> <span class="p">(),</span> <span class="p">{}),</span>
+<a id="__codelineno-4-43" name="__codelineno-4-43" href="#__codelineno-4-43"></a>  <span class="s1">&#39;skew&#39;</span><span class="p">:</span> <span class="p">(</span><span class="n">scipy</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">skew</span><span class="p">,</span> <span class="p">(),</span> <span class="p">{}),</span>
+<a id="__codelineno-4-44" name="__codelineno-4-44" href="#__codelineno-4-44"></a>  <span class="s1">&#39;kurtosis&#39;</span><span class="p">:</span> <span class="p">(</span><span class="n">scipy</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">kurtosis</span><span class="p">,</span> <span class="p">(),</span> <span class="p">{}),</span>
+<a id="__codelineno-4-45" name="__codelineno-4-45" href="#__codelineno-4-45"></a>  <span class="s1">&#39;crest_factor&#39;</span><span class="p">:</span> <span class="p">(</span><span class="n">crest_factor</span><span class="p">,</span> <span class="p">(),</span> <span class="p">{}),</span>
+<a id="__codelineno-4-46" name="__codelineno-4-46" href="#__codelineno-4-46"></a>  <span class="s1">&#39;clearance_factor&#39;</span><span class="p">:</span> <span class="p">(</span><span class="n">clearance_factor</span><span class="p">,</span> <span class="p">(),</span> <span class="p">{}),</span>
+<a id="__codelineno-4-47" name="__codelineno-4-47" href="#__codelineno-4-47"></a>  <span class="s1">&#39;shape_factor&#39;</span><span class="p">:</span> <span class="p">(</span><span class="n">shape_factor</span><span class="p">,</span> <span class="p">(),</span> <span class="p">{}),</span>
+<a id="__codelineno-4-48" name="__codelineno-4-48" href="#__codelineno-4-48"></a>  <span class="s1">&#39;impulse_factor&#39;</span><span class="p">:</span> <span class="p">(</span><span class="n">impulse_factor</span><span class="p">,</span> <span class="p">(),</span> <span class="p">{}),</span>
+<a id="__codelineno-4-49" name="__codelineno-4-49" href="#__codelineno-4-49"></a><span class="p">}</span>
+<a id="__codelineno-4-50" name="__codelineno-4-50" href="#__codelineno-4-50"></a><span class="n">time_features_df</span> <span class="o">=</span> <span class="n">feature_extractor</span><span class="p">(</span><span class="n">signals</span><span class="p">,</span> <span class="n">time_features</span><span class="p">)</span>
+<a id="__codelineno-4-51" name="__codelineno-4-51" href="#__codelineno-4-51"></a>
+<a id="__codelineno-4-52" name="__codelineno-4-52" href="#__codelineno-4-52"></a><span class="c1"># Applying the FFT to transform data into frequency-domain</span>
+<a id="__codelineno-4-53" name="__codelineno-4-53" href="#__codelineno-4-53"></a><span class="n">window</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">signal</span><span class="o">.</span><span class="n">windows</span><span class="o">.</span><span class="n">hann</span><span class="p">(</span><span class="n">signals</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<a id="__codelineno-4-54" name="__codelineno-4-54" href="#__codelineno-4-54"></a><span class="n">freq_filter</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">signal</span><span class="o">.</span><span class="n">butter</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">12500</span><span class="p">],</span> <span class="s1">&#39;bandpass&#39;</span><span class="p">,</span> <span class="n">fs</span> <span class="o">=</span> <span class="mi">25600</span><span class="p">,</span> <span class="n">output</span><span class="o">=</span><span class="s1">&#39;sos&#39;</span><span class="p">)</span>
+<a id="__codelineno-4-55" name="__codelineno-4-55" href="#__codelineno-4-55"></a><span class="n">signals_fft</span> <span class="o">=</span> <span class="n">fft</span><span class="p">(</span><span class="n">signals</span><span class="p">,</span> <span class="n">freq_filter</span> <span class="o">=</span> <span class="n">freq_filter</span><span class="p">,</span> <span class="n">window</span> <span class="o">=</span> <span class="n">window</span><span class="p">)</span>
+<a id="__codelineno-4-56" name="__codelineno-4-56" href="#__codelineno-4-56"></a><span class="n">freq_axis</span> <span class="o">=</span> <span class="n">fft_freq_axis</span><span class="p">(</span><span class="mi">8337</span><span class="p">,</span> <span class="mi">48828</span><span class="p">)</span>
+<a id="__codelineno-4-57" name="__codelineno-4-57" href="#__codelineno-4-57"></a>
+<a id="__codelineno-4-58" name="__codelineno-4-58" href="#__codelineno-4-58"></a><span class="c1"># Extracting frequency-domain features</span>
+<a id="__codelineno-4-59" name="__codelineno-4-59" href="#__codelineno-4-59"></a><span class="n">freq_features</span> <span class="o">=</span> <span class="p">{</span>
+<a id="__codelineno-4-60" name="__codelineno-4-60" href="#__codelineno-4-60"></a>  <span class="s1">&#39;mean&#39;</span><span class="p">:</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">,</span> <span class="p">(),</span> <span class="p">{}),</span>
+<a id="__codelineno-4-61" name="__codelineno-4-61" href="#__codelineno-4-61"></a>  <span class="s1">&#39;var&#39;</span><span class="p">:</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">var</span><span class="p">,</span> <span class="p">(),</span> <span class="p">{}),</span>
+<a id="__codelineno-4-62" name="__codelineno-4-62" href="#__codelineno-4-62"></a>  <span class="s1">&#39;skew&#39;</span><span class="p">:</span> <span class="p">(</span><span class="n">scipy</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">skew</span><span class="p">,</span> <span class="p">(),</span> <span class="p">{}),</span>
+<a id="__codelineno-4-63" name="__codelineno-4-63" href="#__codelineno-4-63"></a>  <span class="s1">&#39;kurtosis&#39;</span><span class="p">:</span> <span class="p">(</span><span class="n">scipy</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">kurtosis</span><span class="p">,</span> <span class="p">(),</span> <span class="p">{}),</span>
+<a id="__codelineno-4-64" name="__codelineno-4-64" href="#__codelineno-4-64"></a>  <span class="s1">&#39;spectral_centroid&#39;</span><span class="p">:</span> <span class="p">(</span><span class="n">spectral_centroid</span><span class="p">,</span> <span class="p">(</span><span class="n">freq_axis</span><span class="p">,),</span> <span class="p">{}),</span>
+<a id="__codelineno-4-65" name="__codelineno-4-65" href="#__codelineno-4-65"></a>  <span class="s1">&#39;P17&#39;</span><span class="p">:</span> <span class="p">(</span><span class="n">P17</span><span class="p">,</span> <span class="p">(</span><span class="n">freq_axis</span><span class="p">,),</span> <span class="p">{}),</span>
+<a id="__codelineno-4-66" name="__codelineno-4-66" href="#__codelineno-4-66"></a>  <span class="s1">&#39;P18&#39;</span><span class="p">:</span> <span class="p">(</span><span class="n">P18</span><span class="p">,</span> <span class="p">(</span><span class="n">freq_axis</span><span class="p">,),</span> <span class="p">{}),</span>
+<a id="__codelineno-4-67" name="__codelineno-4-67" href="#__codelineno-4-67"></a>  <span class="s1">&#39;P19&#39;</span><span class="p">:</span> <span class="p">(</span><span class="n">P19</span><span class="p">,</span> <span class="p">(</span><span class="n">freq_axis</span><span class="p">,),</span> <span class="p">{}),</span>
+<a id="__codelineno-4-68" name="__codelineno-4-68" href="#__codelineno-4-68"></a>  <span class="s1">&#39;P20&#39;</span><span class="p">:</span> <span class="p">(</span><span class="n">P20</span><span class="p">,</span> <span class="p">(</span><span class="n">freq_axis</span><span class="p">,),</span> <span class="p">{}),</span>
+<a id="__codelineno-4-69" name="__codelineno-4-69" href="#__codelineno-4-69"></a>  <span class="s1">&#39;P21&#39;</span><span class="p">:</span> <span class="p">(</span><span class="n">P21</span><span class="p">,</span> <span class="p">(</span><span class="n">freq_axis</span><span class="p">,),</span> <span class="p">{}),</span>
+<a id="__codelineno-4-70" name="__codelineno-4-70" href="#__codelineno-4-70"></a>  <span class="s1">&#39;P22&#39;</span><span class="p">:</span> <span class="p">(</span><span class="n">P22</span><span class="p">,</span> <span class="p">(</span><span class="n">freq_axis</span><span class="p">,),</span> <span class="p">{}),</span>
+<a id="__codelineno-4-71" name="__codelineno-4-71" href="#__codelineno-4-71"></a>  <span class="s1">&#39;P23&#39;</span><span class="p">:</span> <span class="p">(</span><span class="n">P23</span><span class="p">,</span> <span class="p">(</span><span class="n">freq_axis</span><span class="p">,),</span> <span class="p">{}),</span>
+<a id="__codelineno-4-72" name="__codelineno-4-72" href="#__codelineno-4-72"></a>  <span class="s1">&#39;P24&#39;</span><span class="p">:</span> <span class="p">(</span><span class="n">P24</span><span class="p">,</span> <span class="p">(</span><span class="n">freq_axis</span><span class="p">,),</span> <span class="p">{}),</span>
+<a id="__codelineno-4-73" name="__codelineno-4-73" href="#__codelineno-4-73"></a><span class="p">}</span>
+<a id="__codelineno-4-74" name="__codelineno-4-74" href="#__codelineno-4-74"></a><span class="n">freq_features_df</span> <span class="o">=</span> <span class="n">feature_extractor</span><span class="p">(</span><span class="n">signals_fft</span><span class="p">,</span> <span class="n">freq_features</span><span class="p">)</span>
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
