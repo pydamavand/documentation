@@ -52,10 +52,10 @@ signals, metadata = df.iloc[:, : -3], df.iloc[:, -3 :] # last three columns are 
 ## Documentation
 
 Detailed API reference of each module is accessible through the links, below:
-- [**utils**](utils.md)
-- [**signal_processing**](signal_processing.md)
-- [**datasets**](datasets.md)
-- [**augmentations**](augmentations.md)
+  - [**utils**](utils.md)
+  - [**signal_processing**](signal_processing.md)
+  - [**datasets**](datasets.md)
+  - [**augmentations**](augmentations.md)
 
 ## Demonstrations and Tutorials
 
