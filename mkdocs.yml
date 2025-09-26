@@ -54,5 +54,5 @@ extra_javascript:
 repo_url: https://github.com/pydamavand/damavand
 repo_name: pydamavand/damavand
 
-site_url: https://pydamavand.github.io/documentation/
-site_base_url: /documentation/
+# site_url: https://pydamavand.github.io/documentation/
+# site_base_url: /documentation/
