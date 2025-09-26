@@ -8,7 +8,7 @@ Damavand simplifies the development of an Extract-Transform-Load (ETL) pipeline 
 
 The image below, illustrates the lifecycle of a Damavand pipeline. As highlighted in the image, employment of Damavand makes the development of ETL pipelines highly repeatable, resulting in faster iterative trials.
 
-![Damavand Lifecycle](/assets/images/lifecycle.jpg)
+![Damavand Lifecycle](assets/images/lifecycle.jpg)
 
 It is worth mentioning that we do not regard data augmentation as an essential step of the pipeline; therefore, we have not included that in this section; complementary explanations on data augmentation using Damavand is provided late on this page.
 
@@ -25,7 +25,7 @@ Damavand currently consists of four modules:
 
 The image below, illustrates an overview of the Damavand.
 
-![Damavand Overview](/assets/images/damavand_overview.jpg)
+![Damavand Overview](assets/images/damavand_overview.jpg)
 
 ## Datasets
 

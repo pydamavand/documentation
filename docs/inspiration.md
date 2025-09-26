@@ -1,7 +1,7 @@
 # Inspiration
 
 <p align="center">
-  <img src="/assets/images/header.jpg" alt="Damavand from Abbasabad">
+  <img src="assets/images/header.jpg" alt="Damavand from Abbasabad">
 </p>
 
 <p align="center">
@@ -76,8 +76,8 @@ The modern poet Bahār personifies Damavand as a chained giant — snow-capped, 
 One of the most glorious appearances of Damavand in music, is defiently the Symphony No. 6 by [Shahin Farhat](https://en.wikipedia.org/wiki/Shahin_Farhat); Iranian musician and composer.
 
 <div style="display: flex; justify-content: center; gap: 10px; align-items: flex-start;">
-  <img src="/assets/images/shahin_farhat.jpg" alt="Shahin Farhat" style="height:300px; width:auto;">
-  <img src="/assets/images/damavand_symphony_artwork.jpg" alt="Symphony No. 6 Artwork" style="height:300px; width:auto;">
+  <img src="assets/images/shahin_farhat.jpg" alt="Shahin Farhat" style="height:300px; width:auto;">
+  <img src="assets/images/damavand_symphony_artwork.jpg" alt="Symphony No. 6 Artwork" style="height:300px; width:auto;">
 </div>
 
 
@@ -99,7 +99,7 @@ One of the most glorious appearances of Damavand in music, is defiently the Symp
 Photography has captured Damavand’s towering presence, often highlighting its snow-covered peak against Iran’s landscapes.  
 
 <p align="center">
-  <img src="/assets/images/tiled_image.jpg" alt="Damavand Mountain">
+  <img src="assets/images/tiled_image.jpg" alt="Damavand Mountain">
 </p>
 <p align="center">
   Sources: 
