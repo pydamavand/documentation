@@ -24,7 +24,7 @@ jobs:
 
       - name: Build MkDocs site
         # This command runs MkDocs and puts the output in the 'site' directory
-        run: mkdocs build --base-url /documentation/
+        run: mkdocs build
       
       - name: Upload artifact
         # This action uploads the 'site' directory for the Pages deployment job
