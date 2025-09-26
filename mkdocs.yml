@@ -1,0 +1,55 @@
+site_name: Damavand Documentations
+theme:
+  name: material
+  palette:
+    - scheme: slate
+      primary: teal
+      accent: amber
+  logo: assets/images/logo_new_cropped.jpg
+  favicon: assets/images/logo_new_cropped.jpg
+
+nav:
+  - Home: index.md
+  - Advanced Topics: advanced.md
+  - API Reference:
+    - Signal Processing: signal_processing.md
+    - Datasets: datasets.md
+    - Augmentations: augmentations.md
+    - Utility: utils.md
+  - Notebooks:
+    - Dataset Demonstrations:
+      - CWRU: notebooks/dataset_demos/CWRU_demo.ipynb
+      - KAIST: notebooks/dataset_demos/KAIST_demo.ipynb
+      - MaFaulDa: notebooks/dataset_demos/MaFaulDa_demo.ipynb
+      - MEUT: notebooks/dataset_demos/MEUT_demo.ipynb
+      - MFPT: notebooks/dataset_demos/MFPT_demo.ipynb
+      - PU: notebooks/dataset_demos/PU_demo.ipynb
+      - SEU: notebooks/dataset_demos/SEU_demo.ipynb
+      - UoO: notebooks/dataset_demos/UoO_demo.ipynb
+    - Tutorials:
+      - Signal Processing: notebooks/tutorials/signal_processing_101.ipynb
+      - Custom Dataset Digestor: notebooks/tutorials/custom_digestor_development.ipynb
+      - Custom Feature Extraction: notebooks/tutorials/custom_feature_extraction.ipynb
+      - Example of Health State Classification: notebooks/tutorials/classification_demo.ipynb
+  - Inspiration: inspiration.md
+plugins:
+  - search
+  - mkdocs-jupyter:
+      include_source: true
+
+markdown_extensions:
+  - admonition
+  - codehilite
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+      linenums: false
+  - pymdownx.arithmatex:
+      generic: true
+
+extra_javascript:
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+repo_url: https://github.com/amirberenji1995/damavand
+repo_name: amirberenji1995/damavand
