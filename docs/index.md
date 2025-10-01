@@ -72,12 +72,11 @@ Additionally, following tutorials are provided:
 
 ## License
 
-Damavand is dual-licensed: free for non-commercial use under the
-[PolyForm Noncommercial License 1.0.0]().
+Damavand is dual-licensed: free for non-commercial use under the [PolyForm Noncommercial License 1.0.0](https://github.com/pydamavand/damavand/blob/main/LICENSES/LICENSE-NONCOMMERCIAL.txt).
 
 Use within a commercial product or for internal business operations in a for-profit organization requires a separate commercial license. Please contact [ahberenji@gmail.com](mailto:ahberenji@gmail.com) for inquiries.  
 
-See [LICENSES/LICENSE.md]() for full details.
+Check out the [LICENSES/LICENSE.txt](https://github.com/pydamavand/damavand/blob/main/LICENSES/LICENSE.txt) file, on the main repository, for full details.
 
 
 ## Next steps
