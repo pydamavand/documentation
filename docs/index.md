@@ -68,7 +68,7 @@ Additionally, following tutorials are provided:
 2. [How to develop a digestor for a custom dataset?](notebooks/tutorials/custom_digestor_development.ipynb)
 3. [How to develop a custom feature to extract?](notebooks/tutorials/custom_feature_extraction.ipynb)
 4. Anomaly detection (Comming soon!)
-5. [Health state classification](notebooks/tutorials/Classification_demo.ipynb)
+5. [Health state classification](notebooks/tutorials/classification_demo.ipynb)
 
 ## License
 
