@@ -152,7 +152,7 @@ By this function, one can augment signals by scaling their amplitudes using a sc
 # Importings
 from damavand.damavand.datasets.downloaders import read_addresses, ZipDatasetDownloader
 from damavand.damavand.datasets.digestors import MFPT
-from damavand.damavand.augmentations import masking_noise
+from damavand.damavand.augmentations import amplitude_shifting
 
 # Downloading the MFPT dataset
 addresses = read_addresses()
