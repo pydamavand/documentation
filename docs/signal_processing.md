@@ -32,11 +32,17 @@ addresses = read_addresses()
 downloader = ZipDatasetDownloader(addresses['MFPT'])
 downloader.download_extract('MFPT.zip', 'MFPT/')
 
-mfpt = MFPT('MFPT/MFPT Fault Data Sets/', [
-    '1 - Three Baseline Conditions',
-    '2 - Three Outer Race Fault Conditions',
-    '3 - Seven More Outer Race Fault Conditions',
-    '4 - Seven Inner Race Fault Conditions',
+mfpt = MFPT('MFPT/', [
+	'baseline_1.mat',
+	'InnerRaceFault_vload_1.mat',
+	'InnerRaceFault_vload_2.mat',
+	'InnerRaceFault_vload_4.mat',
+	'InnerRaceFault_vload_7.mat',
+	'OuterRaceFault_1.mat',
+	'OuterRaceFault_vload_1.mat',
+	'OuterRaceFault_vload_2.mat',
+	'OuterRaceFault_vload_4.mat',
+	'OuterRaceFault_vload_7.mat',
 ])
 
 # Mining the dataset
@@ -136,11 +142,17 @@ addresses = read_addresses()
 downloader = ZipDatasetDownloader(addresses['MFPT'])
 downloader.download_extract('MFPT.zip', 'MFPT/')
 
-mfpt = MFPT('MFPT/MFPT Fault Data Sets/', [
-    '1 - Three Baseline Conditions',
-    '2 - Three Outer Race Fault Conditions',
-    '3 - Seven More Outer Race Fault Conditions',
-    '4 - Seven Inner Race Fault Conditions',
+mfpt = MFPT('MFPT/', [
+	'baseline_1.mat',
+	'InnerRaceFault_vload_1.mat',
+	'InnerRaceFault_vload_2.mat',
+	'InnerRaceFault_vload_4.mat',
+	'InnerRaceFault_vload_7.mat',
+	'OuterRaceFault_1.mat',
+	'OuterRaceFault_vload_1.mat',
+	'OuterRaceFault_vload_2.mat',
+	'OuterRaceFault_vload_4.mat',
+	'OuterRaceFault_vload_7.mat',
 ])
 
 # Mining the dataset
@@ -190,11 +202,17 @@ addresses = read_addresses()
 downloader = ZipDatasetDownloader(addresses['MFPT'])
 downloader.download_extract('MFPT.zip', 'MFPT/')
 
-mfpt = MFPT('MFPT/MFPT Fault Data Sets/', [
-    '1 - Three Baseline Conditions',
-    '2 - Three Outer Race Fault Conditions',
-    '3 - Seven More Outer Race Fault Conditions',
-    '4 - Seven Inner Race Fault Conditions',
+mfpt = MFPT('MFPT/', [
+	'baseline_1.mat',
+	'InnerRaceFault_vload_1.mat',
+	'InnerRaceFault_vload_2.mat',
+	'InnerRaceFault_vload_4.mat',
+	'InnerRaceFault_vload_7.mat',
+	'OuterRaceFault_1.mat',
+	'OuterRaceFault_vload_1.mat',
+	'OuterRaceFault_vload_2.mat',
+	'OuterRaceFault_vload_4.mat',
+	'OuterRaceFault_vload_7.mat',
 ])
 
 # Mining the dataset
@@ -296,11 +314,17 @@ addresses = read_addresses()
 downloader = ZipDatasetDownloader(addresses['MFPT'])
 downloader.download_extract('MFPT.zip', 'MFPT/')
 
-mfpt = MFPT('MFPT/MFPT Fault Data Sets/', [
-    '1 - Three Baseline Conditions',
-    '2 - Three Outer Race Fault Conditions',
-    '3 - Seven More Outer Race Fault Conditions',
-    '4 - Seven Inner Race Fault Conditions',
+mfpt = MFPT('MFPT/', [
+	'baseline_1.mat',
+	'InnerRaceFault_vload_1.mat',
+	'InnerRaceFault_vload_2.mat',
+	'InnerRaceFault_vload_4.mat',
+	'InnerRaceFault_vload_7.mat',
+	'OuterRaceFault_1.mat',
+	'OuterRaceFault_vload_1.mat',
+	'OuterRaceFault_vload_2.mat',
+	'OuterRaceFault_vload_4.mat',
+	'OuterRaceFault_vload_7.mat',
 ])
 
 # Mining the dataset
