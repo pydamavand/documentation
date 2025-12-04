@@ -236,7 +236,17 @@ kaist.mine(mining_params)
 
 ##### Instantiation: ```MFPT(base_directory, folders)```
   - ```base_directory``` is the home directory of the extracted file.
-  - ```folders``` is the list of folders to include; valid elements are *1 - Three Baseline Conditions*, *2 - Three Outer Race Fault Conditions*, *3 - Seven More Outer Race Fault Conditions* and *4 - Seven Inner Race Fault Conditions*.
+  - ```files``` is the list of files to include; valid elements are:
+		- *baseline_1.mat*
+		- *InnerRaceFault_vload_1.mat*
+		- *InnerRaceFault_vload_2.mat*
+		- *InnerRaceFault_vload_4.mat*
+		- *InnerRaceFault_vload_7.mat*
+		- *OuterRaceFault_1.mat*
+		- *OuterRaceFault_vload_1.mat*
+		- *OuterRaceFault_vload_2.mat*
+		- *OuterRaceFault_vload_4.mat*
+		- *OuterRaceFault_vload_7.mat*
 
 ##### Mining: ```MFPT.mine(mining_params)```
   - ```mining_params``` is a nested python dictonary whose keys are 97656 and 48828 (sampling frequencies the dataset is collected by) and the corresponding values are objects of python dictonary. Secondary dictonaries each have two keys: ```win_len``` and ```hop_len``` with correponding values.
@@ -257,15 +267,21 @@ downloader = ZipDatasetDownloader(addresses['MFPT'])
 downloader.download_extract('MFPT.zip', 'MFPT/')
 
 # Mining the dataset
-mfpt = MFPT('MFPT/MFPT Fault Data Sets/', [
-    '1 - Three Baseline Conditions',
-    '2 - Three Outer Race Fault Conditions',
-    '3 - Seven More Outer Race Fault Conditions',
-    '4 - Seven Inner Race Fault Conditions',
+mfpt = MFPT('MFPT/', [
+	'baseline_1.mat',
+	'InnerRaceFault_vload_1.mat',
+	'InnerRaceFault_vload_2.mat',
+	'InnerRaceFault_vload_4.mat',
+	'InnerRaceFault_vload_7.mat',
+	'OuterRaceFault_1.mat',
+	'OuterRaceFault_vload_1.mat',
+	'OuterRaceFault_vload_2.mat',
+	'OuterRaceFault_vload_4.mat',
+	'OuterRaceFault_vload_7.mat',
 ])
 mining_params = {
-    97656: {'win_len': 16671, 'hop_len': 2000},
-    48828: {'win_len': 8337, 'hop_len': 1000},
+	97656: {'win_len': 16671, 'hop_len': 2000},
+	48828: {'win_len': 8337, 'hop_len': 1000},
 }
 mfpt.mine(mining_params)
 ```
