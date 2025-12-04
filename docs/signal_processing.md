@@ -378,3 +378,63 @@ freq_features = {
 }
 freq_features_df = feature_extractor(signals_fft, freq_features)
 ```
+
+### ```catch_features(signals, include_additionals = True)```
+
+#### Extracting the catch-22 feature set
+
+##### Arguments:
+- **signals**: A ```pandas.DataFrame``` incuding signals in its rows.
+- **include_additionals**: A boolean flag to specify if the two additional features, mean and standard deviation, should be extracted or only the 22 features are desired.
+
+##### Return Value:
+- A ```pandas.DataFrame```, including the feature values for the signals in the inputted ```pandas.DataFrame```.
+
+##### Description:
+Authors of [this study](https://link.springer.com/article/10.1007/s10618-019-00647-x) introduce a feature set that not only provide strong classification performance over a wide range of time series dataset, but also are minimally redundant. Using the [official implementation](https://time-series-features.gitbook.io/catch22/language-specific-docs/python#computing-catch22-features) of the authors under the hood, this function extracts this feature set.
+
+
+##### Example:
+
+```Python
+# Importings
+from damavand.damavand.datasets.downloaders import read_addresses, ZipDatasetDownloader
+from damavand.damavand.datasets.digestors import MFPT
+from damavand.damavand.signal_processing.feature_extraction import *
+from damavand.damavand.signal_processing.transformations import fft
+from damavand.damavand.utils import *
+from zipfile import ZipFile
+import pandas as pd
+
+# Downloading the MFPT dataset
+addresses = read_addresses()
+downloader = ZipDatasetDownloader(addresses['MFPT'])
+downloader.download_extract('MFPT.zip', 'MFPT/')
+
+mfpt = MFPT('MFPT/', [
+	'baseline_1.mat',
+	'InnerRaceFault_vload_1.mat',
+	'InnerRaceFault_vload_2.mat',
+	'InnerRaceFault_vload_4.mat',
+	'InnerRaceFault_vload_7.mat',
+	'OuterRaceFault_1.mat',
+	'OuterRaceFault_vload_1.mat',
+	'OuterRaceFault_vload_2.mat',
+	'OuterRaceFault_vload_4.mat',
+	'OuterRaceFault_vload_7.mat',
+])
+
+# Mining the dataset
+mining_params = {
+    97656: {'win_len': 16671, 'hop_len': 2000},
+    48828: {'win_len': 8337, 'hop_len': 1000},
+}
+mfpt.mine(mining_params)
+
+# Signal/Metadata split
+df = pd.concat(mfpt.data[48828]).reset_index(drop = True)
+signals, metadata = df.iloc[:, : - 4], df.iloc[:, - 4 :]
+
+# Toggle the include_additionals to False, to stay with the original 22 features
+catch22_features_df = catch22_features(signals, include_additionals=True)
+```
